@@ -6,6 +6,49 @@
  *
  * @package Business
  */
+/**
+Required: set 'ot_theme_mode' filter to true.
+Все фильтры можно найти в файле примеров /option-tree/assets/theme-mode/demo-functions.php
+*/
+add_filter( 'ot_theme_mode', '__return_true' );
+
+/**
+Отключили Layout-ы
+*/
+add_filter( 'ot_show_new_layout', '__return_false' );
+
+/**
+Отображать/не отображать в сайдбаре админки WP пункт меню - "Option Tree" - настройки плагина
+*/
+add_filter( 'ot_show_pages', '__return_true' );
+
+/**
+"Обнуляем" фильтр 'ot_theme_options_parent_slug' - пункт меню "Настройки темы"
+начинает отображаться в сайдбаре админки WP отдельно в другом месте ниже
+*/
+function theme_options_parent($parent) {
+	$parent = '';
+	return $parent;
+}
+add_filter('ot_theme_options_parent_slug' , 'theme_options_parent' , 20);
+
+/**
+Required: include OptionTree.
+*/
+require( trailingslashit( get_template_directory() ) . 'option-tree/ot-loader.php' );
+/**
+Файлы demo-meta-boxes.php и demo-theme-options.php перенести 
+из option-tree/assets/theme-modeв корень темы /functions переименовать (без демо) 
+Там будут все-все настройки темы - мета-боксы для постов и глобальные настройки темы.
+После функции trailingslashit( get_template_directory() ) - слеш у указании пути НЕ НУЖЕН!
+*/
+require( trailingslashit( get_template_directory() ) . 'functions/meta-boxes.php' );
+require( trailingslashit( get_template_directory() ) . 'functions/theme-options.php' );
+
+/**
+Список всех фильтров для плагина Option-Theme (по выводу в админке):
+Корень темы/option-tree/includes/ot-option-admin.php
+*/
 
 if ( ! function_exists( 'html2wp_setup' ) ) :
 	/**
@@ -14,6 +57,7 @@ if ( ! function_exists( 'html2wp_setup' ) ) :
 	 * Note that this function is hooked into the after_setup_theme hook, which
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
+	 * if - поддержка дочерних тем
 	 */
 	function html2wp_setup() {
 		
