@@ -128,9 +128,9 @@ function html2wp_style() {
 add_action( 'wp_enqueue_scripts', 'html2wp_style' ); 
  
 function html2wp_scripts() {
-	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/script.js', array ('jquery'), '1.2', true );
-	wp_enqueue_script( 'rd-navbar', get_template_directory_uri() . '/js/jquery.rd-navbar.js', array ('jquery'), '', true );
-	wp_enqueue_script( 'superfish', get_template_directory_uri() . '/js/superfish.js', array ('jquery'), '', true );
+	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/script.js', array ('jquery'), '1.3', true );
+	wp_enqueue_script( 'rd-navbar', get_template_directory_uri() . '/js/jquery.rd-navbar.js', array ('jquery'), '1.1', true );
+	wp_enqueue_script( 'superfish', get_template_directory_uri() . '/js/superfish.js', array ('jquery'), '1.1', true );
 	wp_enqueue_script( 'tmstickup', get_template_directory_uri() . '/js/tmstickup.js', array ('jquery'), '', true );
 	wp_enqueue_script( 'magnific-popup-script', get_template_directory_uri() . '/js/jquery.magnific-popup.min.js', array('jquery'), '', true );
 /**	

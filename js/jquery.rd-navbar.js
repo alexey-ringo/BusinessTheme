@@ -257,6 +257,6 @@
     };
 })(jQuery);
 
-$(document).ready(function () {
+jQuery(document).ready(function () {
     RDMobilemenu_autoinit('[data-type="navbar"]');
 });
