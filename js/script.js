@@ -45,6 +45,8 @@ jQuery(document).ready(function($) {
     });
 });
 
+/* Stick up menus
+ ========================================================*/
 jQuery(function($) {
     $(document).ready( function() {
       //enabling stickUp on the '.navbar-wrapper' class
@@ -52,20 +54,7 @@ jQuery(function($) {
     });
   });
 
-/* Stick up menus
- ========================================================
-;
-(function ($) {
-    var o = $('html');
-    if (o.hasClass('desktop')) {
-        include('js/tmstickup.js');
 
-        $(document).ready(function () {
-            $('#stuck_container').TMStickUp({})
-        });
-    }
-})(jQuery);
-*/
 
 /* ToTop
  ========================================================*/
