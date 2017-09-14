@@ -117,18 +117,18 @@ jQuery(document).ready(function($) {
 
 /* Superfish menus
  ========================================================*/
-;
+/*;
 (function ($) {
     include('js/superfish.js');    
 })(jQuery);
-
+*/
 /* Navbar
  ========================================================*/
-;
+/*;
 (function ($) {
     include('js/jquery.rd-navbar.js');
 })(jQuery);
-
+*/
 
 /* Google Map
  ========================================================*/
