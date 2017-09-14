@@ -25,8 +25,12 @@
 	<header>
         <div class="container">
           	<div class="brand">
-            	<h1 class="brand_name"><a href="./">Business</a></h1>
-            	<p class="brand_slogan">Company</p>
+          		<?php if (is_front_page() && is_home()) { ?>
+              		<h1 class="brand_name"><?php bloginfo('name'); ?></h1>
+                <?php } else { ?>
+            		<div class="brand_name"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></div>
+            	<?php } ?>
+            	   	<p class="brand_slogan"><?php bloginfo('description'); ?></p>
           	</div>
           	<a href="callto:#" class="fa-phone">800-2345-6789</a>
           	<p>One of our representatives will happily contact you within 24 hours. For urgent needs call us at</p>
