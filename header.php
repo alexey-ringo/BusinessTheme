@@ -36,16 +36,37 @@
             	<?php } ?>
             	
             	<?php if (ot_get_option('desc_on_off') != 'off') { ?>
-                <p class="brand_slogan"><?php bloginfo('description'); ?></p>
+                    <p class="brand_slogan"><?php bloginfo('description'); ?></p>
                 <?php } ?>
           	</div>
           	<?php if (ot_get_option('contact_phone')) { ?>
-            <a href="callto:<?php echo str_replace(array(" ", "(", ")", "-"), "", ot_get_option('contact_phone'));  ?>" 
-            class="fa-phone"><?php echo ot_get_option('contact_phone');  ?></a>
+                <a href="callto:<?php echo str_replace(array(" ", "(", ")", "-"), "", ot_get_option('contact_phone'));  ?>" 
+                class="fa-phone"><?php echo ot_get_option('contact_phone');  ?></a>
             <?php } ?>
           
             <?php if (ot_get_option('contact_open')) { ?>
-            <p><?php echo ot_get_option('contact_open');  ?></p>
+                <p><?php echo ot_get_option('contact_open');  ?></p>
+            <?php } ?>
+            
+            <?php if (ot_get_option('header_feedback_on_off') != 'off') { ?>
+            <!--Если тумблер "Вкл/выкл обр. звонок" включен - то выводим (через echo) текст (обернутый в ссылку),
+                введенный в текстовое поле настроек темы "Заголовок".  
+                По факту - это массив в /functions/theme-options.php типа 'text' с id => 'feedback_title'
+                Сама ссылка ссылается по href на div ниже, в котором непосредственно выводится модальная форма для контактных данных.
+                Ссылку обернули в <p> с целью правого флоатинга-->
+                <p><a href="#header-feedback-form" class="feedback-form"><?php echo ot_get_option('feedback_title');  ?></a></p>
+            
+                <!--div, в котором собственно выводится модальная форма для контактных данных. 
+                Классы mfp-hide white-popup-block - Magnific Popup plugin (magnific-popup.css). По умолчанию - display: none -->
+                <div id="header-feedback-form" class="mfp-hide white-popup-block">
+                <!--Проверяем - заполнено ли поле "Форма обратной связи" в настройках темы - 
+                    закладка "Обратная связь" - массив типа 'text' с id => 'feedback_form'-->
+                <?php if (ot_get_option('feedback_form')) { ?>
+                <!--Если поле заполнено (это шорткод из Contact Form 7), то выводим поля формы-->
+                    <?php echo do_shortcode( ot_get_option('feedback_form'));  ?>
+                <?php } ?>
+                </div>
+            
             <?php } ?>
         </div>
         <div id="stuck_container" class="stuck_container">
