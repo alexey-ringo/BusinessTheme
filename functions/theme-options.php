@@ -55,6 +55,21 @@ function custom_theme_options() {
         'type'        => 'upload',
         'section'     => 'header', /*привязка к нужной секции - было 'option_types',*/
       ),
+      array(
+        'id'          => 'desc_on_off',
+        'label'       => 'Выключение описания сайта',
+        'desc'        => '',
+        'std'         => 'off' /*Установка по умолчанию */,
+        'type'        => 'on-off',
+        'section'     => 'header', /*привязка к нужной секции - было 'option_types',*/
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'min_max_step'=> '',
+        'class'       => '',
+        'condition'   => '',
+        'operator'    => 'and'
+      ),
       /* Дефолтные примеры демо-массивов настроек options-theme */
       array(
         'id'          => 'demo_background',
