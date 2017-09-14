@@ -150,6 +150,18 @@ hr {
   margin-top: 18px;
 }
 
+/* Contact Form 7 form options */
+input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="url"], input[type="text"] {
+    padding: 10px;
+    margin-bottom: 5px;
+    width: 94%;
+    display: inline-block;
+}
+input[type="submit"]{
+    padding: 10px;
+    border: 0;
+    text-transform: uppercase;
+}
 /*=======================================================
 					   Main Layout
 =========================================================*/
@@ -270,6 +282,25 @@ p + .btn_wr {
 }
 .brand img {
   max-height: 50px;
+}
+/*Magnific Popup div options */
+.white-popup-block{
+    position: relative;
+    background: #FFF;
+    padding: 40px 50px 20px;
+    width: auto;
+    max-width: 30%;
+    margin: 20px auto;
+}
+#header-feedback-form input[type="submit"]{
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    color: #fff;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    background: #0a7c88;
 }
 
 /*==================  Backgrounds  ======================*/
