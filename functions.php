@@ -141,7 +141,16 @@ function html2wp_scripts() {
 add_action( 'wp_enqueue_scripts', 'html2wp_scripts' );
 
 
- 
+function html2wp_filter_current_item_menu_header( $classes ) {
+	if (in_array('current-menu-item', $classes)) {
+		$classes[] = 'active';
+	}
+	return $classes;
+}
+
+add_filter( 'nav_menu_css_class', 'html2wp_filter_current_item_menu_header' );
+
+
 /**
  * Load WooCommerce compatibility file.
  */
