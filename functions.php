@@ -72,7 +72,7 @@ if ( ! function_exists( 'html2wp_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'html2wp' ),
+			'primary' => esc_html__( 'Primary', 'html2wp' ),
 		) );
 
 		/*
