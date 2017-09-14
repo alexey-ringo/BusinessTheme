@@ -102,6 +102,41 @@ function custom_theme_options() {
         'type'        => 'text',
         'section'     => 'header',
       ),
+      /*новая вкладка - tab в меню header-'Шапка' */
+      array(
+        'id'          => 'header_feedback_tab',
+        'label'       => 'Обратная связь',
+        'desc'        => '',
+        'type'        => 'tab',
+        'section'     => 'header', /*привязка к нужной секции */
+      ),
+      array(
+        'id'          => 'header_feedback_on_off',
+        'label'       => 'Вкл/Выкл обратного звонка',
+        'desc'        => '',
+        'std'         => 'on',
+        'type'        => 'on-off',
+        'section'     => 'header',
+      ),
+      array(
+        'id'          => 'feedback_title',
+        'label'       => 'Заголовок',
+        'desc'        => '',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'header',
+        'condition'   => 'header_feedback_on_off:is(on)',
+      ),
+      array(
+        'id'          => 'feedback_form',
+        'label'       => 'Форма обратной связи',
+        'desc'        => 'Добавьте в это поле шорт-код из плагина Contact Form 7',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'header',
+        'condition'   => 'header_feedback_on_off:is(on)',
+      ),
+      
       /* Дефолтные примеры демо-массивов настроек options-theme */
       array(
         'id'          => 'demo_background',
