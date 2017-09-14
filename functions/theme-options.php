@@ -49,6 +49,14 @@ function custom_theme_options() {
     ),
     'settings'        => array(
       array(
+        'id'          => 'header_main_tab',
+        'label'       => 'Основные',
+        'desc'        => '',
+        'type'        => 'tab',
+        'section'     => 'header', /*привязка к нужной секции*/
+      ),
+      /*Все нижеидущие массивы до след. 'tab' - будут включены в таб 'Основные' */
+      array(
         'id'          => 'logo_upload',
         'label'       => 'Логотип',
         'desc'        => 'Загрузите картинку для логотипа',
@@ -69,6 +77,30 @@ function custom_theme_options() {
         'class'       => '',
         'condition'   => '',
         'operator'    => 'and'
+      ),
+      
+      array(
+        'id'          => 'header_contact_tab',
+        'label'       => 'Контакты',
+        'desc'        => '',
+        'type'        => 'tab',
+        'section'     => 'header', /*привязка к нужной секции - было 'option_types',*/
+      ),
+      array(
+        'id'          => 'contact_phone',
+        'label'       => 'Телефон',
+        'desc'        => '',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'header',
+      ),
+      array(
+        'id'          => 'contact_open',
+        'label'       => 'Часы работы',
+        'desc'        => '',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'header',
       ),
       /* Дефолтные примеры демо-массивов настроек options-theme */
       array(
