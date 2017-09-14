@@ -31,18 +31,31 @@ function custom_theme_options() {
         array(
           'id'        => 'option_types_help',
           'title'     => __( 'Option Types', 'theme-text-domain' ),
-          'content'   => '<p>' . __( 'Help content goes here!', 'theme-text-domain' ) . '</p>'
+          'content'   => '<p>' . 'Здесь можно указать описание настроек с использованием html-тегов' . '</p>'
         )
       ),
       'sidebar'       => '<p>' . __( 'Sidebar content goes here!', 'theme-text-domain' ) . '</p>'
     ),
     'sections'        => array( 
+      /* Добавили новую секцию в глобальных настройках темы */
+      array(
+        'id'          => 'header',
+        'title'       => 'Шапка',
+      ),
       array(
         'id'          => 'option_types',
         'title'       => __( 'Option Types', 'theme-text-domain' )
-      )
+      ),
     ),
-    'settings'        => array( 
+    'settings'        => array(
+      array(
+        'id'          => 'logo_upload',
+        'label'       => 'Логотип',
+        'desc'        => 'Загрузите картинку для логотипа',
+        'type'        => 'upload',
+        'section'     => 'header', /*привязка к нужной секции - было 'option_types',*/
+      ),
+      /* Дефолтные примеры демо-массивов настроек options-theme */
       array(
         'id'          => 'demo_background',
         'label'       => __( 'Background', 'theme-text-domain' ),
