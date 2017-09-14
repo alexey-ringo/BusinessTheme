@@ -28,6 +28,23 @@ include('js/jquery.easing.1.3.js');
     }
 })(jQuery); 
 
+//Активация Magnific Popup form
+jQuery(document).ready(function($) {
+    $('.feedback-form').magnificPopup({
+        type: 'inline',
+        preloader: false,
+        callbacks: {
+            beforeOpen: function() {
+                if($(window).width() < 700) {
+                    this.st.focus = false;
+                } else {
+                    this.st.focus = '#name';
+                }
+            }
+        }
+    });
+});
+
 /* Stick up menus
  ========================================================*/
 ;
@@ -275,3 +292,4 @@ var o = $('#camera');
     include('js/mailform/jquery.form.min.js');
     include('js/mailform/jquery.rd-mailform.min.c.js');
 })(jQuery);
+
