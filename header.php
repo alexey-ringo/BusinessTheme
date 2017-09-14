@@ -26,7 +26,11 @@
         <div class="container">
           	<div class="brand">
           		<?php if (is_front_page() && is_home()) { ?>
+          		    <?php if (ot_get_option('logo_upload')) { ?>
+          		    <h1 class="brand_name"><img src="<?php echo ot_get_option('logo_upload');  ?>" alt=""></h1>
+                    <?php } else { ?>
               		<h1 class="brand_name"><?php bloginfo('name'); ?></h1>
+              		<?php } ?>
                 <?php } else { ?>
             		<div class="brand_name"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></div>
             	<?php } ?>
