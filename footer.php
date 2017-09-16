@@ -18,13 +18,25 @@
           <div class="container">
             <div class="row">
               <div class="grid_4">
-                <?php dynamic_sidebar('footer-left'); ?>
+                <?php 
+                if (is_active_sidebar('footer-left')) :
+                dynamic_sidebar('footer-left'); 
+                endif;
+                ?>
               </div>
               <div class="grid_4">
-                <?php dynamic_sidebar('footer-center'); ?>
+                <?php 
+                if (is_active_sidebar('footer-left')) :
+                dynamic_sidebar('footer-left'); 
+                endif;
+                ?>
               </div>
               <div class="grid_4">
-                <?php dynamic_sidebar('footer-right'); ?>
+                <?php 
+                if (is_active_sidebar('footer-left')) :
+                dynamic_sidebar('footer-left'); 
+                endif;
+                ?>
               </div>
             </div>
           </div>
