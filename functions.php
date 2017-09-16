@@ -171,16 +171,25 @@ function html2wp_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'html2wp_scripts' );
 
-
+/* Добавление активного класса в меню */
 function html2wp_filter_current_item_menu_header( $classes ) {
 	if (in_array('current-menu-item', $classes)) {
 		$classes[] = 'active';
 	}
 	return $classes;
 }
-
 add_filter( 'nav_menu_css_class', 'html2wp_filter_current_item_menu_header' );
 
+/* Удаление класса 'page'из передаваемого в функцию body_class() массива классов */
+function html2wp_remove_page_class($classes) {
+	/* Если в переданном в функцию массиве $classes есть элемент 'page' */
+	if ($key = array_search('page', $classes)) {
+		/* то тогда удаляем из массива $classes элемент 'page' */
+		unset($classes[$key]);
+	}
+	return $classes;
+}
+add_filter('body_class', 'html2wp_remove_page_class');
 
 /**
  * Load WooCommerce compatibility file.
