@@ -43,6 +43,10 @@ function custom_theme_options() {
         'title'       => 'Шапка',
       ),
       array(
+        'id'          => 'footer',
+        'title'       => 'Подвал',
+      ),
+      array(
         'id'          => 'option_types',
         'title'       => __( 'Option Types', 'theme-text-domain' )
       ),
@@ -135,6 +139,15 @@ function custom_theme_options() {
         'type'        => 'text',
         'section'     => 'header',
         'condition'   => 'header_feedback_on_off:is(on)',
+      ),
+      /* Подвал */
+      array(
+        'id'          => 'copyright_footer',
+        'label'       => 'Копирайт',
+        'desc'        => '',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'footer',
       ),
       
       /* Дефолтные примеры демо-массивов настроек options-theme */
