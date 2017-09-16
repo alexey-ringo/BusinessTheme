@@ -14,7 +14,7 @@
 	</div><!-- #content -->
 
       <footer>
-        <section class="widget">
+        <section class="widget well3">
           <div class="container">
             <div class="row">
               <div class="grid_4">
