@@ -14,6 +14,21 @@
 	</div><!-- #content -->
 
       <footer>
+        <section class="widget">
+          <div class="container">
+            <div class="row">
+              <div class="grid_4">
+                <?php dynamic_sidebar('footer-left'); ?>
+              </div>
+              <div class="grid_4">
+                <?php dynamic_sidebar('footer-center'); ?>
+              </div>
+              <div class="grid_4">
+                <?php dynamic_sidebar('footer-right'); ?>
+              </div>
+            </div>
+          </div>
+        </section>
         <section>
           <div class="container">
             <div class="copyright">

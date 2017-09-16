@@ -111,7 +111,7 @@ function html2wp_widgets_init() {
 	) );
 	register_sidebar( array(
 		'name'          => 'Подвал слева',
-		'id'            => 'footer-center',
+		'id'            => 'footer-left',
 		'description'   => '',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
@@ -120,7 +120,7 @@ function html2wp_widgets_init() {
 	) );
 	register_sidebar( array(
 		'name'          => 'Подвал в центре',
-		'id'            => 'footer-left',
+		'id'            => 'footer-center',
 		'description'   => '',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
