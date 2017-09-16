@@ -16,7 +16,13 @@
       <footer>
         <section>
           <div class="container">
-            <div class="copyright">Business Company © <span id="copyright-year"></span>.&nbsp;&nbsp;<a href="index-5.html">Privacy Policy</a>More Business Website Templates at <a rel="nofollow" href="http://www.templatemonster.com/category/business-web-templates/" target="_blank">TemplateMonster.com</a>
+            <div class="copyright">
+              <?php if (ot_get_option('copyright_footer')) { ?>
+                  <?php echo ot_get_option('copyright_footer'); ?></p>
+              <?php } else { ?> 
+              Все защищено
+              <?php } ?> © 
+              <span id="copyright-year"></span>.&nbsp;&nbsp;<a href="index-5.html">Privacy Policy</a>More Business Website Templates at <a rel="nofollow" href="http://www.templatemonster.com/category/business-web-templates/" target="_blank">TemplateMonster.com</a>
             </div>
           </div>
         </section>
