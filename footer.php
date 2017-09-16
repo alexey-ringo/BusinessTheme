@@ -26,14 +26,14 @@
               </div>
               <div class="grid_4">
                 <?php 
-                if (is_active_sidebar('footer-left')) :
+                if (is_active_sidebar('footer-center')) :
                 dynamic_sidebar('footer-left'); 
                 endif;
                 ?>
               </div>
               <div class="grid_4">
                 <?php 
-                if (is_active_sidebar('footer-left')) :
+                if (is_active_sidebar('footer-right')) :
                 dynamic_sidebar('footer-left'); 
                 endif;
                 ?>
