@@ -109,6 +109,33 @@ function html2wp_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => 'Подвал слева',
+		'id'            => 'footer-center',
+		'description'   => '',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<div class="widget-title">',
+		'after_title'   => '</div>',
+	) );
+	register_sidebar( array(
+		'name'          => 'Подвал в центре',
+		'id'            => 'footer-left',
+		'description'   => '',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<div class="widget-title">',
+		'after_title'   => '</div>',
+	) );
+	register_sidebar( array(
+		'name'          => 'Подвал справа',
+		'id'            => 'footer-right',
+		'description'   => '',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<div class="widget-title">',
+		'after_title'   => '</div>',
+	) );
 }
 add_action( 'widgets_init', 'html2wp_widgets_init' );
 
