@@ -1,4 +1,4 @@
-function include(scriptUrl) {
+/*function include(scriptUrl) {
     document.write('<script src="' + scriptUrl + '"></script>');
 }
 
@@ -6,18 +6,18 @@ function isIE() {
     var myNav = navigator.userAgent.toLowerCase();
     return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
 };
-
+*/
 /* cookie.JS
  ========================================================*/
-include('js/jquery.cookie.js');
+/* include('js/jquery.cookie.js'); */
 
 /* Easing library
  ========================================================*/
-include('js/jquery.easing.1.3.js');
+/* include('js/jquery.easing.1.3.js'); */
 
 /* PointerEvents  
  ========================================================*/
-;
+/*;
 (function ($) {
     if(isIE() && isIE() < 11){ 
         include('js/pointer-events.js');
@@ -27,7 +27,7 @@ include('js/jquery.easing.1.3.js');
         });
     }
 })(jQuery); 
-
+*/
 //Активация Magnific Popup form
 jQuery(document).ready(function($) {
     $('.feedback-form').magnificPopup({
@@ -58,7 +58,7 @@ jQuery(function($) {
 
 /* ToTop
  ========================================================*/
-;
+/*;
 (function ($) {
     var o = $('html');
     if (o.hasClass('desktop')) {
@@ -72,20 +72,20 @@ jQuery(function($) {
         });
     }
 })(jQuery);
-
+*/
 /* EqualHeights
  ========================================================*/
-;
+/*;
 (function ($) {
     var o = $('[data-equal-group]');
     if (o.length > 0) {
         include('js/jquery.equalheights.js');
     }
 })(jQuery);
-
+*/
 /* SMOOTH SCROLLIG
  ========================================================*/
-;
+/*;
 (function ($) {
     var o = $('html');
     if (o.hasClass('desktop')) {
@@ -100,17 +100,17 @@ jQuery(function($) {
         });
     }
 })(jQuery);
-
+*/
 /* Copyright Year
  ========================================================*/
-;
+/*;
 (function ($) {
     var currentYear = (new Date).getFullYear();
     $(document).ready(function () {
         $("#copyright-year").text((new Date).getFullYear());
     });
 })(jQuery);
-
+*/
 
 /* Superfish menus
  ========================================================*/
@@ -129,7 +129,7 @@ jQuery(function($) {
 
 /* Google Map
  ========================================================*/
-;
+/*;
 (function ($) {
     var o = document.getElementById("google-map");
     if (o) {
@@ -147,10 +147,10 @@ jQuery(function($) {
     }
 })
 (jQuery);
-
+*/
 /* WOW
  ========================================================*/
-;
+/*;
 (function ($) {
     var o = $('html');
 
@@ -164,10 +164,10 @@ jQuery(function($) {
         }
     }
 })(jQuery);
-
+*/
 /* Contact Form
  ========================================================*/
-;
+/*;
 (function ($) {
     var o = $('#contact-form');
     if (o.length > 0) {
@@ -179,10 +179,10 @@ jQuery(function($) {
         }
     }
 })(jQuery);
-
+*/
 /* Orientation tablet fix
  ========================================================*/
-$(function () {
+/*$(function () {
     // IPad/IPhone
     var viewportmeta = document.querySelector && document.querySelector('meta[name="viewport"]'),
         ua = navigator.userAgent,
@@ -227,10 +227,10 @@ if (!result) {
     userScale = ",user-scalable=0"
 }
 document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0' + userScale + '">');
-
+*/
 /* Camera
 ========================================================*/
-;(function ($) {
+/*;(function ($) {
 var o = $('#camera');
     if (o.length > 0) {
         if (!(isIE() && (isIE() > 9))) {
@@ -257,10 +257,10 @@ var o = $('#camera');
         });
     }
 })(jQuery);
-
+*/
 /* Owl Carousel
 ========================================================*/
-;(function ($) {
+/*;(function ($) {
     var o = $('.owl-carousel');
     if (o.length > 0) {
         include('js/owl.carousel.min.js');
@@ -282,11 +282,11 @@ var o = $('#camera');
         });
     }
 })(jQuery);
-
+*/
 /* Mailform
 =============================================*/
-;(function ($) {
+/*;(function ($) {
     include('js/mailform/jquery.form.min.js');
     include('js/mailform/jquery.rd-mailform.min.c.js');
 })(jQuery);
-
+*/
