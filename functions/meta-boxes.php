@@ -18,6 +18,52 @@ function custom_meta_boxes() {
    * Create a custom meta boxes array that we pass to 
    * the OptionTree Meta Box API Class.
    */
+  $main_page = array(
+    'id'          => 'main_page_box',
+    'title'       => 'Настройки главной страницы',
+    'desc'        => '',
+    'pages'       => array( 'page' ),
+    'context'     => 'normal',/*normal - отображать под контентом, side - сбоку */
+    'priority'    => 'high',
+    'fields'      => array(
+      array(
+        'label'       => 'Слайдер',
+        'id'          => 'main_slider_tab',
+        'type'        => 'tab'
+      ),
+      array(
+        'label'       => 'Показывать слайдер',
+        'id'          => 'main_slider_show',
+        'type'        => 'on-off',
+        'desc'        => 'Показывать или нет слайдер на главной странице',
+        'std'         => 'off'
+      ),
+      array(
+        'id'          => 'main_slider_list',
+        'label'       => 'Слайдер',
+        'desc'        => '',
+        'std'         => '',
+        'type'        => 'list-item',
+        'condition'   => 'main_slider_show:is(on)',/*Если кнопка включена - настройка будет показываться*/
+        'settings'    => array( 
+          array(
+            'id'          => 'main_slider_list_header',
+            'label'       => 'Напишите заголовок',
+            'desc'        => '',
+            'type'        => 'text',
+          ),
+          array(
+            'id'          => 'main_slider_list_upload',
+            'label'       => 'Загрузите слайд',
+            'desc'        => '',
+            'std'         => '',
+            'type'        => 'upload',
+          ),
+        )
+      ),
+    )
+  );   
+/* Default example */   
   $my_meta_box = array(
     'id'          => 'demo_meta_box',
     'title'       => __( 'Demo Meta Box', 'theme-text-domain' ),
@@ -79,5 +125,6 @@ function custom_meta_boxes() {
    */
   if ( function_exists( 'ot_register_meta_box' ) )
     ot_register_meta_box( $my_meta_box );
+    ot_register_meta_box( $main_page );
 
 }
