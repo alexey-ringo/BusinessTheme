@@ -125,6 +125,14 @@ function custom_meta_boxes() {
    */
   if ( function_exists( 'ot_register_meta_box' ) )
     ot_register_meta_box( $my_meta_box );
-    ot_register_meta_box( $main_page );
+  /**
+   * Решение, позволяющее отображать метабокс только на страницах, созданных на основе конкретного шаблона - "main-page.php".
+   * Регистрируем метабокс $main_page только в случае положительного результата прверки
+   */
+    $post_id = isset( $_GET['post'] ) ? $_GET['post'] : ( isset( $_POST['post_ID']) ? $_POST['post_ID'] : 0 );
+    $template_file = get_post_meta($post_id, '_wp_page_template', TRUE);
+    if ( $template_file == 'main-page.php') {
+      ot_register_meta_box( $main_page );
+    }
 
 }
